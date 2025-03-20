@@ -1,1 +1,192 @@
-sdsd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Merge PDF files online. Easily combine your PDFs into one file with our free tool.">
+    <meta name="keywords" content="PDF merger, merge PDF, combine PDFs, free PDF tool,Image compression tool,Compress images online,Image optimizer,Online image compressor,Reduce image size,Compress JPEG online,Compress PNG online,Image size reducer,Photo compression tool,Optimize images for web,Best free image compression tool,How to compress images without losing quality,Compress images for website,
+Online tool to reduce image size,Compress large images for email,Image compressor for social media,Free online JPEG compressor,Compress photos for faster website loading,Image size reducer for mobile,Compress images for free online,Image compression tool USA,Online image compressor India,Best image optimizer UK,Compress images online Canada,Free photo compression tool Australia,
+How to compress images for web,Why image compression is important for SEO,Best image formats for web,JPEG vs PNG: Which is better for compression?,How to reduce image size without losing quality,Top 5 image compression tools,How to optimize images for faster website loading,Image compression tips for bloggers,How to compress images for social media,What is image compression and how does it work?,
+Compress images on mobile,Image size reducer for Android,Photo compression tool for iPhone,Best mobile image compressor,Compress images for WhatsApp,Reduce image size for Instagram,Mobile-friendly image compression tool,API for image compression,Bulk image compression tool,Image compression for developers,Lossless image compression tool,Image optimization for web developers,Compress images using API,Image compression for WordPress,
+Compress product images for e-commerce,Image optimization for online stores,Reduce image size for faster website loading,Best image compressor for Shopify,Image compression for WooCommerce,Optimize product photos for web,Compress images for faster checkout,Free image compression tool,Free online image optimizer,Compress images for free,Free photo size reducer,Best free image compressor,Free tool to reduce image size,
+Free JPEG compressor,Free PNG compressor,Compress images for faster website speed,Image optimization for faster loading,Reduce image size for better performance,Compress images for SEO,Image compression for faster page load,Optimize images for better website performance,Compress JPEG images,Compress PNG images,Compress GIF images,Compress WebP images,Compress SVG images,Compress TIFF images,Compress BMP images,">
+    <meta name="author" content="Your Name">
+    <title>PDF Merger Tool</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px 0;
+        }
+
+        .content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .upload-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .upload-section input[type="file"] {
+            margin: 10px 0;
+        }
+
+        .merge-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .merge-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .output-section {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer .ads {
+            margin: 20px 0;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .upload-section input,
+            .merge-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>PDF Merger Tool</h1>
+        <p>Combine multiple PDFs into one in just a few clicks. It's fast and free!</p>
+    </div>
+</header>
+
+<div class="container content">
+    <div class="upload-section">
+        <input type="file" id="pdfInput" accept="application/pdf" multiple>
+        <button class="merge-btn" onclick="mergePDFs()">Merge PDFs</button>
+    </div>
+
+    <div class="output-section" id="outputSection">
+        <!-- Merged PDF download link will appear here -->
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="ads">
+            <!-- Google Adsense code -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXX"
+                 data-ad-slot="XXXXXXX"
+                 data-ad-format="auto"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <p>&copy; 2025 PDF Merger Tool. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- PDF-lib for merging PDFs -->
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+
+<script>
+    async function mergePDFs() {
+        const pdfInput = document.getElementById('pdfInput');
+        const outputSection = document.getElementById('outputSection');
+
+        if (pdfInput.files.length < 2) {
+            alert("Please select at least two PDF files to merge.");
+            return;
+        }
+
+        const pdfDocs = [];
+        
+        // Read the selected files
+        for (let file of pdfInput.files) {
+            const arrayBuffer = await file.arrayBuffer();
+            const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+            pdfDocs.push(pdfDoc);
+        }
+
+        // Create a new merged PDF document
+        const mergedPdf = await PDFLib.PDFDocument.create();
+
+        // Copy pages from all the PDFs into the merged document
+        for (let pdfDoc of pdfDocs) {
+            const copiedPages = await mergedPdf.copyPages(pdfDoc, pdfDoc.getPageIndices());
+            copiedPages.forEach(page => mergedPdf.addPage(page));
+        }
+
+        // Save the merged PDF
+        const mergedPdfBytes = await mergedPdf.save();
+
+        // Create a download link
+        const mergedPdfBlob = new Blob([mergedPdfBytes], { type: 'application/pdf' });
+        const mergedPdfUrl = URL.createObjectURL(mergedPdfBlob);
+        const downloadLink = document.createElement('a');
+        downloadLink.href = mergedPdfUrl;
+        downloadLink.download = 'merged.pdf';
+        downloadLink.textContent = 'Download Merged PDF';
+
+        // Display the download link
+        outputSection.innerHTML = '';
+        outputSection.appendChild(downloadLink);
+    }
+</script>
+
+</body>
+</html>
+
