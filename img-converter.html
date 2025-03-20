@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert your images online with our fully responsive image converter tool. Optimize images for web use by converting to JPEG, PNG, WebP, and more.">
+    <meta name="keywords" content="image converter, convert images online, image optimizer, convert JPEG, convert PNG, convert WebP,Image compression tool,Compress images online,Image optimizer,Online image compressor,Reduce image size,Compress JPEG online,Compress PNG online,Image size reducer,Photo compression tool,Optimize images for web,Best free image compression tool,How to compress images without losing quality,Compress images for website,
+Online tool to reduce image size,Compress large images for email,Image compressor for social media,Free online JPEG compressor,Compress photos for faster website loading,Image size reducer for mobile,Compress images for free online,Image compression tool USA,Online image compressor India,Best image optimizer UK,Compress images online Canada,Free photo compression tool Australia,
+How to compress images for web,Why image compression is important for SEO,Best image formats for web,JPEG vs PNG: Which is better for compression?,How to reduce image size without losing quality,Top 5 image compression tools,How to optimize images for faster website loading,Image compression tips for bloggers,How to compress images for social media,What is image compression and how does it work?,
+Compress images on mobile,Image size reducer for Android,Photo compression tool for iPhone,Best mobile image compressor,Compress images for WhatsApp,Reduce image size for Instagram,Mobile-friendly image compression tool,API for image compression,Bulk image compression tool,Image compression for developers,Lossless image compression tool,Image optimization for web developers,Compress images using API,Image compression for WordPress,
+Compress product images for e-commerce,Image optimization for online stores,Reduce image size for faster website loading,Best image compressor for Shopify,Image compression for WooCommerce,Optimize product photos for web,Compress images for faster checkout,Free image compression tool,Free online image optimizer,Compress images for free,Free photo size reducer,Best free image compressor,Free tool to reduce image size,
+Free JPEG compressor,Free PNG compressor,Compress images for faster website speed,Image optimization for faster loading,Reduce image size for better performance,Compress images for SEO,Image compression for faster page load,Optimize images for better website performance,Compress JPEG images,Compress PNG images,Compress GIF images,Compress WebP images,Compress SVG images,Compress TIFF images,Compress BMP images,">
+    <meta name="author" content="Your Name">
+    <title>Image Converter Tool</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #007bff;
+            color: #fff;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin: 10px 0 0;
+        }
+
+        /* Converter Tool Section */
+        #converter-tool {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #converter-tool:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        #converter-tool input, #converter-tool select, #converter-tool button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        #converter-tool input:focus, #converter-tool select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        #converter-tool button {
+            background: #007bff;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+        }
+
+        #converter-tool button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        #output {
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        #converted-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #download-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        #download-link:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* Advertisement Section */
+        #advertisement {
+            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            #converter-tool {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Image Converter Tool</h1>
+        <p>Convert your images online with ease!</p>
+    </header>
+
+    <main>
+        <!-- Image Converter Tool -->
+        <section id="converter-tool">
+            <input type="file" id="image-input" accept="image/*">
+            <label for="format">Select Output Format:</label>
+            <select id="format">
+                <option value="jpeg">JPEG</option>
+                <option value="png">PNG</option>
+                <option value="webp">WebP</option>
+            </select>
+            <button id="convert-btn">Convert Image</button>
+            <div id="output">
+                <img id="converted-image" src="" alt="Converted Image">
+                <a id="download-link" href="" download="converted-image">Download Converted Image</a>
+            </div>
+        </section>
+
+        <!-- Advertisement Section -->
+        <section id="advertisement">
+            <!-- Google AdSense Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_UNIT_ID"
+                    crossorigin="anonymous"></script>
+            <!-- Ad Unit -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_AD_UNIT_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Image Converter Tool. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Image Converter
+        document.getElementById('convert-btn').addEventListener('click', function() {
+            const fileInput = document.getElementById('image-input');
+            const format = document.getElementById('format').value;
+            const outputImage = document.getElementById('converted-image');
+            const downloadLink = document.getElementById('download-link');
+            const outputDiv = document.getElementById('output');
+
+            if (fileInput.files.length === 0) {
+                alert('Please select an image to convert.');
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const img = new Image();
+                img.src = e.target.result;
+
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+
+                    ctx.drawImage(img, 0, 0);
+
+                    canvas.toBlob(function(blob) {
+                        const convertedImageUrl = URL.createObjectURL(blob);
+                        outputImage.src = convertedImageUrl;
+                        downloadLink.href = convertedImageUrl;
+                        downloadLink.download = `converted-image.${format}`;
+                        outputDiv.style.display = 'block';
+                    }, `image/${format}`, 0.9);
+                };
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>
