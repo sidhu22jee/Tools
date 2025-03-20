@@ -1,199 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our collection of free online tools for image and PDF optimization. Compress, convert, and edit images and PDFs effortlessly.">
-    <meta name="keywords" content="image tools, PDF tools, online tools, compress images, compress PDF, image converter, PDF converter,Image compression tool,Compress images online,Image optimizer,Online image compressor,Reduce image size,Compress JPEG online,Compress PNG online,Image size reducer,Photo compression tool,Optimize images for web,Best free image compression tool,How to compress images without losing quality,Compress images for website,
-Online tool to reduce image size,Compress large images for email,Image compressor for social media,Free online JPEG compressor,Compress photos for faster website loading,Image size reducer for mobile,Compress images for free online,Image compression tool USA,Online image compressor India,Best image optimizer UK,Compress images online Canada,Free photo compression tool Australia,
-How to compress images for web,Why image compression is important for SEO,Best image formats for web,JPEG vs PNG: Which is better for compression?,How to reduce image size without losing quality,Top 5 image compression tools,How to optimize images for faster website loading,Image compression tips for bloggers,How to compress images for social media,What is image compression and how does it work?,
-Compress images on mobile,Image size reducer for Android,Photo compression tool for iPhone,Best mobile image compressor,Compress images for WhatsApp,Reduce image size for Instagram,Mobile-friendly image compression tool,API for image compression,Bulk image compression tool,Image compression for developers,Lossless image compression tool,Image optimization for web developers,Compress images using API,Image compression for WordPress,
-Compress product images for e-commerce,Image optimization for online stores,Reduce image size for faster website loading,Best image compressor for Shopify,Image compression for WooCommerce,Optimize product photos for web,Compress images for faster checkout,Free image compression tool,Free online image optimizer,Compress images for free,Free photo size reducer,Best free image compressor,Free tool to reduce image size,
-Free JPEG compressor,Free PNG compressor,Compress images for faster website speed,Image optimization for faster loading,Reduce image size for better performance,Compress images for SEO,Image compression for faster page load,Optimize images for better website performance,Compress JPEG images,Compress PNG images,Compress GIF images,Compress WebP images,Compress SVG images,Compress TIFF images,Compress BMP images,">
+    <meta name="description" content="Online tools for PDF compression, image optimization, and YouTube downloads.">
+    <meta name="keywords" content="PDF, image, YouTube, download, compressor, tools">
     <meta name="author" content="Your Name">
-    <title>Online Tools - Image & PDF Optimization</title>
+    <title>Online Tools Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
+        /* General Styling */
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            box-sizing: border-box;
         }
 
         header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
             text-align: center;
-            padding: 40px 20px;
-            background: #007bff;
-            color: #fff;
-            width: 100%;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
             font-weight: 600;
         }
 
-        header p {
-            font-size: 1.1rem;
-            margin: 10px 0 0;
+        .nav-bar a:hover {
+            text-decoration: underline;
         }
 
-        /* Tools Section */
+        .hero-section {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+        }
+
         .tools-container {
             display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            width: 100%;
+            padding: 40px 0;
         }
 
         .tool-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            width: 280px;
-            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            border-radius: 8px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            padding: 20px;
         }
 
         .tool-card img {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
+            width: 100px;
+            height: 100px;
         }
 
         .tool-card h3 {
-            font-size: 1.3rem;
-            margin: 10px 0;
-            color: #007bff;
+            font-size: 1.5em;
+            margin: 15px 0;
         }
 
         .tool-card p {
-            font-size: 0.9rem;
-            color: #666;
-            margin: 0;
+            font-size: 1em;
+            color: #555;
         }
 
         .tool-card a {
             display: inline-block;
-            margin-top: 15px;
+            background-color: #007bff;
+            color: white;
             padding: 10px 20px;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
             border-radius: 5px;
-            font-weight: 600;
-            transition: background 0.3s ease;
+            text-decoration: none;
+            margin-top: 10px;
         }
 
         .tool-card a:hover {
-            background: #0056b3;
+            background-color: #0056b3;
         }
 
-        /* Footer */
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #333;
-            color: #fff;
+        .youtube-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
             text-align: center;
-            width: 100%;
         }
 
-        footer a {
-            color: #007bff;
+        .youtube-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .youtube-section .button {
+            background-color: #ff4500;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin: 10px;
             text-decoration: none;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .youtube-section .button:hover {
+            background-color: #e03e00;
         }
 
-        /* Responsive Design */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer .ads {
+            margin: 20px 0;
+        }
+
+        /* Responsiveness */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
+            .tools-container {
+                flex-direction: column;
+                align-items: center;
             }
 
             .tool-card {
                 width: 100%;
                 max-width: 300px;
             }
+
+            .youtube-section {
+                padding: 20px 0;
+            }
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Header Section -->
     <header>
-        <h1>Online Tools</h1>
-        <p>Your one-stop solution for image and PDF optimization.</p>
-    </header>
-
-    <main>
-        <div class="tools-container">
-            <!-- Image Tools -->
-            <div class="tool-card">
-    <img src="https://cdn-icons-png.flaticon.com/512/3022/3022555.png" alt="Image Compressor">
-    <h3>Image Compressor</h3>
-    <p>Compress JPEG, PNG, and GIF images without losing quality.</p>
-    <a href="/Tools/img-compress.html">Use Tool</a>
-</div>
-
-          <div class="tool-card">
-    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920329.png" alt="Image Converter">
-    <h3>Image Converter</h3>
-    <p>Convert images to different formats like JPEG, PNG, WebP, and more.</p>
-    <a href="/Tools/img-converter.html">Use Tool</a>
-</div>
-
-          <div class="tool-card">
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Image Resizer">
-    <h3>Image Resizer</h3>
-    <p>Resize images to specific dimensions quickly and easily.</p>
-    <a href="/Tools/img-resize.html">Use Tool</a>
-</div>
-
-            <!-- PDF Tools -->
-            <div class="tool-card">
-    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Compressor">
-    <h3>PDF Compressor</h3>
-    <p>Reduce the size of PDF files without compromising quality.</p>
-    <a href="/Tools/pdfcompressor.html">Use Tool</a> <!-- Replace with your desired URL -->
-</div>
-
-
-            <div class="tool-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/337/337958.png" alt="PDF to Word">
-                <h3>PDF to Word</h3>
-                <p>Convert PDF files to editable Word documents.</p>
-                <a href="/Tools/pdftoword.html">Use Tool</a>
+        <div class="container">
+            <div class="nav-bar">
+                <a href="#">Home</a>
+                <a href="#">Tools</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
             </div>
-
-            <div class="tool-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/337/337932.png" alt="PDF Merger">
-                <h3>PDF Merger</h3>
-                <p>Merge multiple PDF files into a single document.</p>
-                <a href="/Tools/pdfmerger.html">Use Tool</a>
+            <div class="hero-section">
+                <h1>Welcome to Your Tools Hub</h1>
+                <p>Explore various tools for PDF compression, image optimization, and YouTube downloads.</p>
             </div>
         </div>
-    </main>
+    </header>
 
+    <!-- Tools Section -->
+    <section class="tools-container">
+        <div class="tool-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Compressor">
+            <h3>PDF Compressor</h3>
+            <p>Reduce the size of PDF files without compromising quality.</p>
+            <a href="/pdf-compressor">Use Tool</a>
+        </div>
+        <div class="tool-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Image Optimizer">
+            <h3>Image Optimizer</h3>
+            <p>Optimize your images for web use, reducing file size and improving load times.</p>
+            <a href="/image-optimizer">Use Tool</a>
+        </div>
+        <!-- Add more tool cards as needed -->
+    </section>
+
+    <!-- YouTube Download Section -->
+    <section class="youtube-section">
+        <h2>YouTube Download Tools</h2>
+        <p>Download YouTube videos, thumbnails, and tags easily with our tools.</p>
+        <a href="#" class="button">Download Video</a>
+        <a href="#" class="button">Download Thumbnail</a>
+        <a href="#" class="button">Download Tags</a>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 Online Tools. All rights reserved.</p>
+        <div class="container">
+            <div class="ads">
+                <!-- Google Adsense code -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-XXXXXXX"
+                    data-ad-slot="XXXXXXX"
+                    data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <p>&copy; 2025 Online Tools Hub. All Rights Reserved.</p>
+        </div>
     </footer>
+
 </body>
+
 </html>
